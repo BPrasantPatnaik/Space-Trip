@@ -1,38 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Space tourism website</title>
 </head>
+
 <body>
+<!--mobile-->
+    <section class="appearance-none w-full h-full bg-no-repeat bg-cover bg-center min-h-screen bg-[url('./assets/destination/background-destination-mobile.jpg')] block md:hidden">
+      <img src="./assets/shared/logo.svg" alt="image" class="bg-white rounded-full relative top-[5vw] left-[4vw] w-[10.66vw]">
+      <div class="flex space-x-[3vw] justify-center relative top-[10vw]">
+         <div class=" text-white text-[3.87vw] font-sans justify-center inline ">01</div>
+         <div class=" text-white text-[3.87vw] font-sans justify-center inline">PICK YOUR DESTINATION</div>
+      </div>
+      <div class=" flexw-[45.3vw] h-[45.3vw] justify-center relative top-[13vw]">
+        <div class="appearance-none bg-contain h-full  bg-no-repeat bg-center bg-[url('./assets/destination/image-europa.png')]"></div>  
+      </div>
+         <nav class="flex space-x-[1vw] text-[#D0D6F9] relative top-[15vw] text-[5vw] justify-center">
+           <a href="destination-moon.html">MOON</a>
+           <a href="destination-mars.html">MARS</a>
+           <a href="destination-europa.html">EUROPA</a>
+           <a href="destination-titan.html">TITAN</a>
+          </nav>
+            <div class="border-[0.20vw] ml-[32vw] mr-[50vw] divide-white relative top-[15vw] left-[17.5vw]"></div>
+            <p class="flex text-white text-[12vw] relative top-[15vw] justify-center">EUROPA</p>
+            <p class=" flex text-[#D0D6F9] justify-center ml-[6.4%] mr-[6.4%] relative top-[15vw] text-[4.295vw] text-center">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+            <div class="border border-solid mr-[10%] ml-[10%] divide-white opacity-40 relative top-[22vw]"></div>
+          <div class="relative top-[18vw]">
+            <p class=" flex text-[#D0D6F9] text-[3.3vw] relative top-[9vw] justify-center"> AVG. DISTANCE</p>
+            <p class="flex text-white text-[5.5vw] relative top-[9vw] justify-center">628 MIL. KM</p>
+            <p class="flex text-[#D0D6F9] text-[3.3vw] relative top-[11vw] justify-center"> EST. TRAVEL TIME</p>
+            <p class="flex text-white text-[5.5vw] font-medium relative top-[11vw] justify-center">3 YEARS</p>  
+          </div>
+  <!-- button -->      
+    <button id="open" class="absolute top-0 right-0 pt-[33px] pr-6">
+      <svg class="hover:opacity-0 hover:scale-150 transition-all duration-1000" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg> 
+   </button>
+  <!-- Glass Window -->
+  <div id="glass" class="hidden flex-col absolute top-0 right-0 h-screen w-[254px] z-20 bg-gray-600 bg-clip-padding bg-opacity-10"  style="backdrop-filter: blur(30px)">
+      <button id="close" class="absolute top-0 right-0 pt-[33px] pr-6">
+          <svg class="hover:opacity-0 hover:scale-150 transition-all duration-1000" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg> 
+      </button>
+      <!-- Navigation Buttons -->
+      <div class="flex flex-col mt-32 space-y-6 width-full">
+          <a class="pl-6 font-barlow-condensed text-white tracking-widest hover:border-r-4 hover:border-slate-600" href="index.html"><b>00</b> HOME</a>
+          <a class="pl-6 font-barlow-condensed text-white tracking-widest border-r-4 border-white" href="destination-moon.html"><b>01</b> DESTINATION</a>
+          <a class="pl-6 font-barlow-condensed text-white tracking-widest hover:border-r-4 hover:border-slate-600" href="crew-commander.html"><b>02</b> CREW</a>
+          <a class="pl-6 font-barlow-condensed text-white tracking-widest hover:border-r-4 hover:border-slate-600" href="technology-vehicle.html"><b>03</b> TECHNOLOGY</a>
+      </div>
+  </div>
+    </section>
+<!--tablet-->
+    <section class="appearance-none w-full h-full bg-no-repeat bg-cover bg-center min-h-screen bg-[url('./assets/destination/background-destination-tablet.jpg')] hidden md:block lg:hidden">
+      <p class=" bg-white drop-shadow-2xl opacity-[4%] relative top-[0vw] right-0 pt-[9vw] left-[40vw] w-[60%]"></p>
+      <nav class="text-white  font-extralight flex space-x-[5vw] relative -top-[6vw] left-[45vw] right-0 mr-[60vw] font-mono text-[2.2vw] w-[30%]">
+        <a href="index.html">Home</a> 
+        <a href="destination-moon.html">Destination</a> 
+        <a href="crew-commander.html">Crew</a> 
+        <a href="technology-vehicle.html">Technology</a> 
+      </nav>
+      <img src="./assets/shared/logo.svg" alt="image" class="bg-white rounded-full relative -top-[8vw] left-[4vw] w-[4vw]">
+      <div class="border-[0.20vw] ml-[60.3vw] mr-[26vw] divide-white relative -top-[7vw] -left-[5.6vw]"></div>
+      </div>
+      <p class="flex">
+        <div class="text-white text-[2.3vw] font-sans  relative left-[11.5vw]  inline">01</div>
+        <div class="text-white text-[2.3vw] font-sans  relative -top-[3.4vw] left-[15.5vw] mr-[19.6vw] ">PICK YOUR DESTINATION</div>
+      </p>
+      <div class=" flexw-[39.07vw] h-[39.07vw] justify-center">
+        <div class="appearance-none bg-contain h-full  bg-no-repeat bg-center bg-[url('./assets/destination/image-europa.png')] "></div>  
+      </div>
+         <nav class="flex space-x-[1vw] text-[#D0D6F9] relative top-[5vw] text-[2.96vw] w-[40%] pr-[0.705vw] ml-[31.445%]">
+           <a href="destination-moon.html">MOON</a>
+           <a href="destination-mars.html">MARS</a>
+           <a href="destination-europa.html">EUROPA</a>
+           <a href="destination-titan.html">TITAN</a>
+          </nav>
+            <div class="border-[0.20vw] ml-[33.4vw] mr-[56vw] divide-white relative top-[5vw] left-[17.5vw]"></div>
+            <p class="flex text-white text-[9vw] relative top-[8vw] justify-center">EUROPA</p>
+            <p class=" text-[#D0D6F9] mr-[10%] ml-[10%]  relative top-[10vw] text-[2.5vw] text-center">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+            <div class="border border-solid mr-[10%] ml-[10%] divide-white opacity-40 relative top-[15vw]"></div>
+            <div class="flex relative top-[20vw] space-x-[3vw] justify-center">
+              <div>
+                <p class="text-[#D0D6F9] text-[1.65vw] inline"> AVG. DISTANCE</p>
+                <p class="text-white text-[3.59vw] h-[2.25vw]">628 MIL. KM</p>
+              </div>
+            <div>
+              <p class="text-[#D0D6F9] text-[1.65vw] inline"> EST. TRAVEL TIME</p>
+              <p class="text-white text-[3.59vw] h-[2.25vw] font-medium">3 YEARS</p>
+            </div>
+        </div>   
+    </section>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+<!--desktop-->
+<section class="appearance-none w-full h-full bg-no-repeat bg-cover bg-center min-h-screen bg-[url('./assets/destination/background-destination-desktop.jpg')] hidden lg:block">
+  <p class="relative top-[2.5vw] left-[45vw] right-0 pt-[4vw]  bg-white drop-shadow-2xl opacity-[10%] mr-[40vw]"></p>
+    <div class="border ml-[15vw] mr-[50vw] border-solid divide-white opacity-20 relative top-[0.5vw] right-[2vw]"></div>
+    <img src="./assets/shared/logo.svg" alt="image" class="bg-white rounded-full relative -top-[1.5vw] left-[1.5vw] w-[4vw]">
+    <div class="border-[0.20vw] ml-[46.7vw] mr-[43vw] divide-white relative -top-[1.7vw] left-[11.3vw]"></div>
+      <p class="flex">
+        <div class="text-white text-[1.77vw] font-sans  relative left-[11.5vw]  inline">01</div>
+        <div class="text-white text-[1.77vw] font-sans  relative -top-[2.6vw] left-[15.5vw] mr-[19.6vw]">PICK YOUR DESTINATION</div>
+      </p>
+      <div class="flex max-w-screen-md">
+        <div class="appearance-none object-cover h-[39.911vw] pt-[5vw]  bg-no-repeat bg-center inline bg-[url('./assets/destination/image-europa.png')] pl-[50vw]"></div>  
+        <div class="pr-[17.2vw] inline">
+            <nav class="flex space-x-[2vw] text-white relative top-[3vw] text-[1.2vw] w-[40%] ">
+           <a href="destination-moon.html">MOON</a>
+           <a href="destination-mars.html">MARS</a>
+           <a href="destination-europa.html">EUROPA</a>
+           <a href="destination-titan.html">TITAN</a>
+            </nav>
+            <div class="border-[0.20vw]  mr-[25vw] divide-white relative top-[3vw] left-[11vw]"></div>
+            <p class="text-white text-[8vw] relative top-[2vw]">EUROPA</p>
+            <p class="text-white text-left relative top-[2vw] text-[1.17vw] "> The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+            <div class="border border-solid divide-white opacity-40 relative top-[4.5vw]"></div>
+            <div class="flex relative top-[6vw] space-x-[1vw]">
+              <div>
+                <p class="text-[#D0D6F9] text-[1vw] inline"> AVG. DISTANCE</p>
+                <p class="text-white text-[1.909vw] h-[2.25vw]">628 MIL. KM</p>
+              </div>
+            <div>
+              <p class="text-[#D0D6F9] text-[1vw] inline"> EST. TRAVEL TIME</p>
+              <p class="text-white text-[1.909vw] h-[2.25vw] font-medium">3 YEARS</p>
+            </div>
+        </div>
+      </div>
+      </div>
+      <nav class=" text-white  font-extralight flex space-x-[3vw] relative -top-[50vw] left-[50vw] right-0 mr-[60vw] font-mono text-[1.3vw] ">
+        <a href="index.html"  class="hover:border-b-[0.4vw] border-spacing-[1vw] divide-slate-500 pb-[0.9vw]">00 Home</a> 
+        <a href="destination-moon.html"  >01 Destination</a> 
+        <a href="crew-commander.html" class="hover:border-b-[0.4vw] border-spacing-[1vw] divide-slate-700 pb-[0.9vw]" >02 Crew</a> 
+        <a href="technology-vehicle.html" class="hover:border-b-[0.4vw] border-spacing-[1vw] divide-slate-700 pb-[0.9vw]">03 Technology</a> 
+      </nav>    
+</section>
+<script>
+  const targetDiv = document.getElementById("glass");
+  const btn = document.getElementById("open");
+  btn.onclick = function () {
+      targetDiv.style.display = "flex";
+  };
 
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Europa
-
-  The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-  winter lover’s dream. With an icy surface, it’s perfect for a bit of 
-  ice skating, curling, hockey, or simple relaxation in your snug 
-  wintery cabin.
-
-  Avg. distance
-  628 mil. km
-
-  Est. travel time
-  3 years
+  const btn1 = document.getElementById("close");
+  btn1.onclick = function () {
+      targetDiv.style.display = "none";
+  };
+</script>
 </body>
 </html>

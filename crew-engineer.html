@@ -1,27 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Space tourism website</title>
 </head>
+
 <body>
+<!--mobile-->
+    <section class="appearance-none w-full h-full bg-no-repeat bg-cover bg-center min-h-screen bg-[url('./assets/crew/background-crew-mobile.jpg')] block md:hidden">
+      <img src="./assets/shared/logo.svg" alt="image" class="bg-white rounded-full relative top-[5vw] left-[4vw] w-[10.66vw]">
+      <div class="flex space-x-[3vw] justify-center relative top-[10vw]">
+         <div class=" text-gray-500 text-[3.87vw] font-sans justify-center inline ">02</div>
+         <div class=" text-white text-[3.87vw] font-sans justify-center inline">MEET YOUR CREW</div>
+      </div>
+      <div class=" flex w-full h-full justify-center">
+        <div class="appearance-none inline bg-contain w-[87.125vw] h-[59.415vw]  bg-no-repeat bg-center relative top-[15vw] bg-[url('./assets/crew/image-anousheh-ansari.png')] "></div>  
+      </div>
+      <div class="border divide-white border-solid  mr-[6.44%] ml-[6.44%] relative top-[15vw]"></div>
+      <div class="flex-col justify-center mr-[6.44%] ml-[6.44%]">
+        <div class="flex relative top-[25vw] space-x-[1vw] justify-center">
+          <a href="crew-commander.html" class="bg-gray-600 p-[1vw] rounded-full inline hover:bg-zinc-500"></a>
+          <a href="crew-specialist.html" class="bg-gray-600 p-[1vw] rounded-full inline hover:bg-zinc-500"></a>
+          <a href="crew-pilot.html" class="bg-gray-600 p-[1vw] rounded-full inline hover:bg-zinc-500"></a>
+          <a href="crew-engineer.html" class="bg-white p-[1vw] rounded-full inline"></a> 
+         </div>
+        <div class="text-gray-500 font-black text-center text-[3.2vw] relative top-[30vw]">FLIGHT ENGINEER</div>
+        <div class="text-white text-center text-[4.975vw] relative top-[30vw]">ANOUSHEH ANSARI</div>
+        <div class="text-[#D0D6F9] text-center text-[4.444vw] relative top-[35vw]">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.  </div>
+      </div>  
+       <!-- button -->      
+       <button id="open" class="absolute top-0 right-0 pt-[33px] pr-6">
+        <svg class="hover:opacity-0 hover:scale-150 transition-all duration-1000" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg> 
+    </button>
+    <!-- Glass Window -->
+    <div id="glass" class="hidden flex-col absolute top-0 right-0 h-screen w-[254px] z-20 bg-gray-600 bg-clip-padding bg-opacity-10"  style="backdrop-filter: blur(30px)">
+        <button id="close" class="absolute top-0 right-0 pt-[33px] pr-6">
+            <svg class="hover:opacity-0 hover:scale-150 transition-all duration-1000" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg> 
+        </button>
+        <!-- Navigation Buttons -->
+        <div class="flex flex-col mt-32 space-y-6 width-full">
+            <a class="pl-6 font-barlow-condensed text-white tracking-widest hover:border-r-4 hover:border-slate-600" href="index.html"><b>00</b> HOME</a>
+            <a class="pl-6 font-barlow-condensed text-white tracking-widest hover:border-r-4 hover:border-slate-600" href="destination-moon.html"><b>01</b> DESTINATION</a>
+            <a class="pl-6 font-barlow-condensed text-white tracking-widest border-r-4 border-white" href="crew-commander.html"><b>02</b> CREW</a>
+            <a class="pl-6 font-barlow-condensed text-white tracking-widest hover:border-r-4 hover:border-slate-600" href="technology-vehicle.html"><b>03</b> TECHNOLOGY</a>
+        </div>
+    </div> 
+    </section>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+<!--tablet-->
+  <section class="appearance-none w-full h-full bg-no-repeat bg-cover bg-center min-h-screen bg-[url('./assets/crew/background-crew-tablet.jpg')] hidden md:block lg:hidden">
+    <p class=" bg-white drop-shadow-2xl opacity-[4%] relative top-[0vw] right-0 pt-[9vw] left-[40vw] w-[60%]"></p>
+    <nav class="text-white  font-extralight flex space-x-[5vw] relative -top-[6vw] left-[45vw] right-0 mr-[60vw] font-mono text-[2.2vw] w-[30%]">
+      <a href="index.html">Home</a> 
+      <a href="destination-moon.html">Destination</a> 
+      <a href="crew-commander.html">Crew</a> 
+      <a href="technology-vehicle.html">Technology</a> 
+    </nav>
+    <img src="./assets/shared/logo.svg" alt="image" class="bg-white rounded-full relative -top-[8vw] left-[4vw] w-[4vw]">
+    <div class="border-[0.20vw] ml-[78.5vw] mr-[16vw] divide-white relative -top-[7vw] -left-[5.6vw]"></div>
+    <div class="flex space-x-[1.5vw] mr-[5%] ml-[5%]">
+      <div class=" text-[2.3vw] font-black text-gray-500    inline">02</div>
+      <div class="text-white text-[2.3vw] font-sans inline">MEET YOUR CREW</div>
+    </div>
+    <div class="flex-col justify-center mr-[13%] ml-[13%]">
+      <div class="text-gray-500 font-black text-center text-[2.435vw] relative top-[4vw]">FLIGHT ENGINEER</div>
+      <div class="text-white text-center text-[4vw] relative top-[4vw]">ANOUSHEH ANSARI</div>
+      <div class="text-[#D0D6F9] text-center text-[2.3845vw] relative top-[7vw]">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. </div>
+      <div class="flex relative top-[14vw] space-x-[1vw] justify-center">
+        <a href="crew-commander.html" class="bg-gray-600 p-[1vw] rounded-full inline hover:bg-zinc-500"></a>
+        <a href="crew-specialist.html" class="bg-gray-600 p-[1vw] rounded-full inline hover:bg-zinc-500"></a>
+        <a href="crew-pilot.html" class="bg-gray-600 p-[1vw] rounded-full inline hover:bg-zinc-500"></a>
+        <a href="crew-engineer.html" class="bg-white p-[1vw] rounded-full inline"></a> 
+      </div>
+    </div>
+    <div class=" flex w-full h-full justify-center relative top-[12.7vw]">
+      <div class="appearance-none inline bg-contain w-[70.25vw] h-[69.273vw]  bg-no-repeat bg-center relative top-[9.2vw] bg-[url('./assets/crew/image-anousheh-ansari.png')] "></div>  
+    </div>
+    </section>
 
-  02 Meet your crew
-
-  Flight Engineer
-  Anousheh Ansari
-
-  Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
-  Ansari was the fourth self-funded space tourist, the first self-funded woman to 
-  fly to the ISS, and the first Iranian in space. 
+<!--desktop-->
+<section class="appearance-none w-full h-full bg-no-repeat bg-cover bg-center min-h-screen bg-[url('./assets/crew/background-crew-desktop.jpg')] hidden lg:block">
+  <p class="relative top-[2.5vw] left-[45vw] right-0 pt-[4vw]  bg-white drop-shadow-2xl opacity-[10%] mr-[40vw]"></p>
+    <div class="border ml-[15vw] mr-[50vw] border-solid divide-white opacity-20 relative top-[0.5vw] right-[2vw]"></div>
+    <img src="./assets/shared/logo.svg" alt="image" class="bg-white rounded-full relative -top-[1.5vw] left-[1.5vw] w-[4vw]">
+    <div class="border-[0.20vw] ml-[60vw] mr-[34.5vw] divide-white relative -top-[1.7vw] left-[10.8vw]"></div>
+    <div class="flex space-x-[2vw] relative top-[10vw] left-[10%]">
+        <div class=" text-gray-500 text-[1.77vw] font-sans inline">02</div>
+        <div class="text-white text-[1.77vw] font-sans  inline">MEET YOUR CREW</div>
+    </div>
+      <div class="flex mr-[7%] ml-[7%]">
+        <div class="flex-col relative top-[20vw] h-full">
+         <div class="font-black text-gray-500 text-[1.72vw]">FLIGHT ENGINEER</div>
+         <div class="text-white text-[3.35vw] inline">ANOUSHEH ANSARI</div>
+         <div class="text-[#D0D6F9] relative top-[3vw] mr-[17vw] text-[1.1vw]">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. </div>
+         <div class="flex relative top-[10vw] space-x-[1vw]">
+          <a href="crew-commander.html" class="bg-gray-600 p-[0.75vw] rounded-full inline hover:bg-zinc-500"></a>
+          <a href="crew-specialist.html" class="bg-gray-600 p-[0.75vw] rounded-full inline hover:bg-zinc-500"></a>
+          <a href="crew-pilot.html" class="bg-gray-600 p-[0.75vw] rounded-full inline hover:bg-zinc-500"></a>
+          <a href="crew-engineer.html" class="bg-white p-[0.75vw] rounded-full inline"></a>
+         </div>
+        </div>
+        <div class=" flex w-full h-full justify-center relative top-[9vw]">
+          <div class="appearance-none bg-contain w-[42.75vw] h-[42.155vw]  bg-no-repeat bg-center bg-[url('./assets/crew/image-anousheh-ansari.png')] "></div>  
+        </div>
+      </div>
+    </div>
+    <nav class=" text-white  font-extralight flex space-x-[3vw] relative -top-[49.5vw] left-[50vw] right-0 mr-[60vw] font-mono text-[1.3vw] ">
+      <a href="index.html"  class="hover:border-b-[0.4vw] border-spacing-[1vw] divide-slate-500 pb-[0.9vw]">00 Home</a> 
+      <a href="destination-moon.html"  class="hover:border-b-[0.4vw] border-spacing-[1vw] divide-slate-700 pb-[0.9vw]">01 Destination</a> 
+      <a href="crew-commander.html" >02 Crew</a> 
+      <a href="technology-vehicle.html" class="hover:border-b-[0.4vw] border-spacing-[1vw] divide-slate-700 pb-[0.9vw]">03 Technology</a> 
+    </nav>
+  </section>
+  <script>
+    const targetDiv = document.getElementById("glass");
+    const btn = document.getElementById("open");
+    btn.onclick = function () {
+        targetDiv.style.display = "flex";
+    };
+  
+    const btn1 = document.getElementById("close");
+    btn1.onclick = function () {
+        targetDiv.style.display = "none";
+    };
+  </script>
 </body>
 </html>
